@@ -148,4 +148,3 @@ Feel free to modify and use it for your own needs.
 
 **Enjoy effortless order management with FoodDeliveryApp!**  
 For questions, issues, or feedback, please [open an issue](https://github.com/israel1jol/FoodDeliveryApp/issues) or reach out on **Microsoft Teams**.
-```
