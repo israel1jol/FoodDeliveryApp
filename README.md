@@ -1,4 +1,3 @@
-```markdown
 # ✨ **FoodDeliveryApp** ✨
 
 > A **unified dashboard** for restaurants to manage orders from multiple delivery platforms (DoorDash, UberEats, etc.) in one place.
