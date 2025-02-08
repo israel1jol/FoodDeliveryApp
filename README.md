@@ -68,23 +68,37 @@
    ```
 4. **Install Frontend Dependencies**  
    ```bash
-   cd client
    npm install
-   cd ..
    ```
-5. **Database Setup**  
+5. **Setup Environment Variables**
    ```bash
+   echo "SECRET_KEY=<_INPUT_>" >> .env
+   echo "CLIENT=<_INPUT_>" >> .env
+   echo "DB_HOST=<_INPUT_>" >> .env
+   echo "DB_NAME=<_INPUT_>" >> .env
+   echo "DB_USER=<_INPUT_>" >> .env
+   echo "DB_PORT=<_INPUT_>" >> .env
+   echo "DB_PASS=<_INPUT_>" >> .env
+   ```
+
+6. **Database Setup**  
+   ```bash
+   cd backend
    python manage.py makemigrations
    python manage.py migrate
    ```
-6. **Run the Application**  
+7. **User Setup(INITIAL MANDIORY CONFIG)**
+   ```bash
+   python manage.py createsuperuser
+   ```
+
+8. **Run the Application**  
    - **Django**:  
      ```bash
      python manage.py runserver
      ```
    - **React** (in a new terminal):  
      ```bash
-     cd client
      npm start
      ```
    - Open **`http://localhost:3000`** in your browser to access the dashboard.
@@ -107,17 +121,25 @@
 ## 🗂 Project Structure
 ```
 FoodDeliveryApp/
-├── client/               # React frontend
-│   ├── public/
-│   ├── src/
-│   └── package.json
-├── backend/              # Django project
-│   ├── settings.py
-│   ├── urls.py
-│   └── ...
-├── requirements.txt      # Python dependencies
+├── backend/               # Django project
+│   ├── api/
+│   ├── backend/
+│   └── manage.py
+├── public/              
+    ├── index.html
+├── src/              # React frontend
+│   ├── Components
+        ├── Login.js
+        ├── Dashboard.js
+│   ├── index.js
+│   └── App.js
+├── .babelrc
+├── .gitignore
+├── package.json          # Node dependencies
 ├── README.md
-└── ...
+├── requirements.txt      # Python dependencies
+├── webpack.config.js
+└── .
 ```
 
 ---
