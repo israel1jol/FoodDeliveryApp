@@ -5,3 +5,5 @@ venv
 **/migrations
 .DS_STORE
 .github
+build
+dist
