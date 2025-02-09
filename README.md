@@ -87,7 +87,7 @@
    python manage.py makemigrations
    python manage.py migrate
    ```
-7. **User Setup(INITIAL MANDIORY CONFIG)**
+7. **User Setup(INITIAL MANDITORY CONFIG)**
    ```bash
    python manage.py createsuperuser
    ```
@@ -101,7 +101,7 @@
      ```bash
      npm start
      ```
-   - Open **`http://localhost:3000`** in your browser to access the dashboard.
+   - Open **`http://localhost:3000`** in your browser to login with your created user and access the dashboard.
 
 ---
 
