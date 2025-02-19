@@ -1,0 +1,12 @@
+Steps to run the project
+
+1. Activate the virtual environment
+    Set-ExecutionPolicy Unrestricted -Scope Process
+    venv\Scripts\Activate.ps1
+
+2. Run the backend
+     python manage.py runserver
+
+3. Run the front end
+    npm start
+
