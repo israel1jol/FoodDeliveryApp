@@ -26,29 +26,50 @@ const Login = () => {
   };
 
   return (
-    <div style={{ margin: '2rem' }}>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Username: </label>
-          <input 
-            type="text" 
-            value={username} 
-            onChange={e => setUsername(e.target.value)} 
-            required 
-          />
+    <div className="FormContainer">
+      <div className="FormGroup">
+        <div className="LoginPanel">
+          <section className="FormPane">
+          <div className="LogoArea"><div className='companyLogo'></div><h2>FoodDeliveryApp</h2></div>
+          <form onSubmit={handleSubmit} id="LoginForm">
+            <h2>Log into your account</h2>
+            <p>Hey! It's nice to have you back.</p>
+            <div>
+              <input 
+              className="usernameInput"
+                type="text" 
+                value={username} 
+                onChange={e => setUsername(e.target.value)} 
+                placeholder="Username"
+                required 
+              />
+              <span onClick={e => document.querySelector(".usernameInput").value = ""}>&#120;</span>
+            </div>
+            <div>
+              <input 
+              className="passwordInput"
+                type="password" 
+                value={password} 
+                onChange={e => setPassword(e.target.value)} 
+                placeholder="Password"
+                required 
+              />
+              <span onClick={e => document.querySelector(".passwordInput").value = ""}>&#120;</span>
+            </div>
+            <div className='loginLinks'>
+              <section>
+                <input type="checkbox" name="remember_me" id="remember_me" />
+                <label htmlFor="remember_me">Remeber me</label>
+              </section>
+              <a href="https://google.com">Forgot Password</a>
+            </div>
+            <button type="submit">Login</button>
+          </form>
+          </section>
         </div>
-        <div>
-          <label>Password: </label>
-          <input 
-            type="password" 
-            value={password} 
-            onChange={e => setPassword(e.target.value)} 
-            required 
-          />
+        <div className='loginSideHeader'>
         </div>
-        <button type="submit" style={{ marginTop: '1rem' }}>Login</button>
-      </form>
+      </div>
     </div>
   );
 };
