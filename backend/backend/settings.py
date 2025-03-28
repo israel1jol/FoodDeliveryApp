@@ -96,12 +96,8 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get("DB_NAME"),            # Your database name
-        'USER':  os.environ.get("DB_USER"),        # Your database user
-        'PASSWORD': os.environ.get("DB_PASS"),        # Your database password
-        'HOST': os.environ.get("DB_HOST"),             # Database host (or IP address)
-        'PORT':  os.environ.get("DB_PORT"),                      # Default PostgreSQL port
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'fooddelivery',
     }
 }
 

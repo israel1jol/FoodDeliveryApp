@@ -6,9 +6,9 @@
   "scripts": {
     "start": "webpack serve --mode development",
     "build": "webpack",
-    "test": "echo \"Error: no test specified\""
+    "test": "IMPORT_LOCAL=false jest --watchAll"
   },
-  "proxy":"http://localhost:8000",
+  "proxy": "http://localhost:8000",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/israel1jol/FoodDeliveryApp.git"
@@ -36,5 +36,13 @@
     "webpack": "^5.97.1",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "axios-mock-adapter": "^2.1.0",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
   }
 }
